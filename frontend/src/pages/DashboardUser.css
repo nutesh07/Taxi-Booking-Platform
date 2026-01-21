@@ -1,0 +1,90 @@
+.dashboard-container {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: flex;
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 25px;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.profile-right {
+  margin-left: 20px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Active ride */
+.active-ride-card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ride history */
+.ride-item {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  padding: 14px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.ride-status {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.ride-status.completed {
+  background: #e7ffe7;
+  color: #0a7b0a;
+}
+
+.ride-status.cancelled {
+  background: #ffeaea;
+  color: #c70e0e;
+}
+
+/* Wallet */
+.wallet-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Settings */
+.settings-list {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.settings-item {
+  padding: 12px 4px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}

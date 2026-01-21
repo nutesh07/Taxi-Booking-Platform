@@ -1,0 +1,49 @@
+.reg-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 10px;
+}
+
+.reg-card {
+  width: 100%;
+  max-width: 550px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  animation: fade .3s ease;
+}
+
+.role-switch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.role-btn {
+  flex: 1;
+  margin: 0 5px;
+  padding: 12px 0;
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  cursor: pointer;
+  transition: .25s ease;
+}
+
+.role-btn.active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  transform: scale(1.03);
+}
+
+.fade-in {
+  animation: fade .4s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}

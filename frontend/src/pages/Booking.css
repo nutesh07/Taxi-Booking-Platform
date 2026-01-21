@@ -1,0 +1,237 @@
+
+.map-holder {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+}
+
+.mapbox-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.ride-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fff;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 20px rgba(15,15,15,0.04);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.ride-card:hover { 
+  transform: translateY(-4px); 
+  box-shadow: 0 12px 28px rgba(15,15,15,0.06); 
+}
+.ride-left { 
+  width: 56px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+}
+.ride-middle { flex:1; }
+.ride-name { font-weight:600; }
+.ride-sub { color:#6b7280; }
+.ride-right { text-align:right; }
+
+
+.bottom-sheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  transition: bottom 300ms ease;
+  z-index: 2000;
+  display:flex;
+  justify-content:center;
+  pointer-events: none;
+}
+.bottom-sheet.open { 
+  bottom: 0; 
+  pointer-events: auto; 
+}
+.sheet-card {
+  width: 100%;
+  max-width: 760px;
+  background: #fff;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  box-shadow: 0 -18px 40px rgba(2,6,23,0.12);
+  padding: 14px 16px 22px;
+}
+.sheet-header { 
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+}
+.driver-avatar { 
+  width:56px; 
+  height:56px; 
+  border-radius:50%; 
+  background:#efefef; 
+}
+.driver-info { flex:1; }
+.driver-name { font-weight:700; }
+.sheet-fare { font-size:18px; font-weight:700; }
+
+
+.pickup-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.pickup-input {
+  height: 48px;
+  font-size: 15px;
+  padding-right: 52px !important;
+}
+
+.pickup-loc-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 38px;
+  width: 38px;
+
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.pickup-loc-btn:hover {
+  background: #f3f3f3;
+}
+
+.pickup-loc-btn ion-icon {
+  font-size: 21px;
+  color: #555;
+}
+
+
+
+.success-popup {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  display: flex;
+  justify-content: center;
+  z-index: 3000;
+  animation: fadeIn 0.3s ease;
+}
+
+.success-card {
+  background: #fff;
+  padding: 18px 22px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+.success-icon {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto 10px;
+  background: #10b981;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(16,185,129,0.4);
+}
+
+.success-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.success-msg {
+  margin-top: 4px;
+  color: #555;
+  font-size: 15px;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+.container {
+  overflow-y: visible !important;
+}
+
+.card {
+  overflow: visible !important;
+}
+
+
+.success-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+.success-card {
+  background: #fff;
+  padding: 28px;
+  width: 320px;
+  border-radius: 16px;
+  text-align: center;
+  animation: popIn 0.35s ease-out;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
+
+.car-animation {
+  font-size: 46px;
+  margin-bottom: 10px;
+  animation: carMove 1.2s infinite ease-in-out;
+}
+
+@keyframes carMove {
+  0% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(-10px); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
